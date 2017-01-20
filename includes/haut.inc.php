@@ -20,6 +20,7 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,7 +32,7 @@
 </head>
 
 <body id="page-top" class="index">
-
+    
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
         <div class="container">
@@ -50,7 +51,11 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#">Connexion</a>
+                        <?php if($connecte==true){ ?>
+                        <a href="deconnexion.php">Deconnexion</a>
+                        <?php }else{ ?>
+                        <a href="connexion.php">Connexion</a>
+                        <?php } ?>
                     </li>    
                 </ul>
             </div>
@@ -65,7 +70,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-text">
-                        <span class="name" >Le fil</span>
+                        <span class="name">Le fil</span>
                         <hr class="star-light">
                     </div>
                 </div>
