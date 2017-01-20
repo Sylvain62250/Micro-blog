@@ -62,10 +62,14 @@
       </div>
   </div>
    <div class="form-group"> 
-        <div class="col-sm-offset-4 col-sm-8">
+        <div class="col-sm-offset-4 col-sm-1">
             <button type="submit" id="connexion" class="btn btn-success">Connexion</button>
+       </div>
+       <div class="col-sm-1">
+           <button type="button" onclick="location.href='inscription.php'" id="inscription" class="btn btn-success">Inscription</button>
        </div>
     </div>
 </form>
+
 
 <?php include('includes/bas.inc.php'); ?>

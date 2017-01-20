@@ -17,3 +17,5 @@
 	header('Location: index.php');
 ?>
 
+<?php include('includes/bas.inc.php'); ?>
+
