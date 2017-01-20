@@ -28,12 +28,29 @@
         header('Location: index.php');
       }
     }
-?>           
+?>  
 
+<!-- Script de véification des champs vides -->
+<script>
+  $(document).ready(function(){
+    $('#form').submit(function(){
+      if( $('#pseudo').val() == '' || $('#pwd').val() == '' ){
+        console.log("pas de mail");
+
+        $('#boite').removeClass();
+        $('#boite').addClass("alert alert-danger");
+        $('#boite').html("L'un des champs n'est pas remplit");
+        $('#boite').slideDown("slow");
+        return false;
+      }
+      return true;
+    });
+  });
 </script>
+
 <div id='boite' class = 'hidden'></div>
 
-<form class="form-horizontal" action="connexion.php" method="POST">
+<form class="form-horizontal" id="form" action="connexion.php" method="POST">
   <div class="form-group">
         <div class="col-sm-offset-4 col-sm-4">
             <input type="input" name='pseudo'class="form-control" id="pseudo" placeholder="Pseudo">
