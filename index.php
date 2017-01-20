@@ -36,6 +36,8 @@ while ($data = $stmt->fetch()) {
     <blockquote>
    
         
+        <p><?= getdate($data['date'])['mday'] . '/' . getdate($data['date'])['mon'] . '/' . getdate($data['date'])['year']?></p>
+        
         <?= $data['contenu'] ?>
         <span class ="pull-right">
           <a href="index.php?id=<?= $data['id'] ?>"><button type="button" class="btn btn-primary">Modifier</button></a>
