@@ -1,8 +1,7 @@
 <?php
 	include('includes/connexion.inc.php');
-
 	if($connecte == true){
-		/*Vérfication de l'ID pour préparer l'update*/
+		/*Vérfication de l'ID*/
 		if(isset($_GET['id']) && !empty($_GET['id'])){
 			$query = 'DELETE FROM messages WHERE id = (:id)';
 			$prep = $pdo->prepare($query);
@@ -10,9 +9,6 @@
 			$prep->execute();
 		}
 	}
-	
-
-	
 
 /*Redirection vers la page d'accueil*/
 	header('Location: index.php');
