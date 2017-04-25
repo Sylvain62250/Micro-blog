@@ -2,6 +2,7 @@
     session_start();
     include('includes/connexion.inc.php');
     include('includes/haut.inc.php');
+    $index = new Smarty();
 ?>
 
 <div class="row">              
@@ -84,6 +85,7 @@
             <span class ="pull-right">
                 <?php 
                     if($connecte==true){ ?>
+                        <a href="index.php?id=<?= $data['id'] ?>"><button type="button" class="btn btn-success">Voter</button></a>
                         <a href="index.php?id=<?= $data['id'] ?>"><button type="button" class="btn btn-primary">Modifier</button></a>
                         <a href="suppression.php?id=<?= $data['id'] ?>"><button type="button" class="btn btn-danger">Supprimer</button></a></span></br>
                 <?php  
